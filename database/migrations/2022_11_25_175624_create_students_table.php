@@ -18,15 +18,8 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('apellidos');
             $table->string('dni');
-            $table->unsignedBigInteger('curso');
+            $table->string('curso');
             $table->timestamps();
-
-            $table->foreign('curso')
-            ->references('id')
-            ->on("cursos")
-            ->onDelete("cascade")
-            ->onUpdate("cascade");
-
         });
     }
 
