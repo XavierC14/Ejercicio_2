@@ -4,12 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Profesor;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 
-//Controller de la tabla profesores y sus campos.
 class ProfesorController extends Controller
 {
-
+    //Controller para hacer el insert
     public function insert(Request $request)
     {
 
@@ -34,7 +32,7 @@ class ProfesorController extends Controller
             return "No tienes permisos";
         }
     }
-
+    //Controller para hacer el update
     public function update(Request $request)
     {
         if (auth()->user()->rol == 4) {
@@ -53,7 +51,7 @@ class ProfesorController extends Controller
             return "No tienes permisos";
         }
     }
-
+    //Controller para hacer el delete
     public function destroy(Request $request)
     {
         if (auth()->user()->rol == 4) {

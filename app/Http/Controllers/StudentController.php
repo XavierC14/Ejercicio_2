@@ -6,18 +6,17 @@ use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
-//Controller de la tabla estudiantes y sus campos
 class StudentController extends Controller
 {
 
+    //Controller para hacer el insert
     public function insert(Request $request)
     {
         if (auth()->user()->rol == 1) {
             $request->validate([
                 'nombre' => 'required',
                 'apellidos' => 'required',
-                'dni' => 'required',
-                'curso' => 'required'
+                'dni' => 'required'
             ]);
 
             $student = new Student();
@@ -35,7 +34,7 @@ class StudentController extends Controller
             return "No tienes permisos";
         }
     }
-
+    //Controller para hacer el update
     public function update(Request $request)
     {
         if (auth()->user()->rol == 1 || auth()->user()->rol == 2) {
@@ -54,7 +53,7 @@ class StudentController extends Controller
             return "No tienes permisos";
         }
     }
-
+    //Controller para hacer el delete
     public function destroy(Request $request)
     {
         if (auth()->user()->rol == 1) {

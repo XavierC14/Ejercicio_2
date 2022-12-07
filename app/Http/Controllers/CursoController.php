@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 // Controller para hacer el insert
-class GradeController extends Controller
+class CursoController extends Controller
 {
 
     public function insert(Request $request)
