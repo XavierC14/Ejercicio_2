@@ -22,7 +22,7 @@ class StudentFactory extends Factory
             'nombre' => fake()->word(),
             'apellidos' => fake()->realText(),
             'dni' => fake()->realText(),
-            'curso' => fake()->rand(18, 30)
+            'curso' => fake()->randomDigit(18, 30)
         ];
     }
 }
