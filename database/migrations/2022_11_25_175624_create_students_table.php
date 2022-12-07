@@ -11,6 +11,8 @@ return new class extends Migration
      *
      * @return void
      */
+
+    //  Funcion para crear la tabla estudiantes y sus campos
     public function up()
     {
         Schema::create('estudiantes', function (Blueprint $table) {
@@ -18,7 +20,7 @@ return new class extends Migration
             $table->string('nombre');
             $table->string('apellidos');
             $table->string('dni');
-            $table->string('curso');
+            $table->integer("curso");
             $table->timestamps();
         });
     }

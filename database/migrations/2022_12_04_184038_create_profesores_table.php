@@ -11,6 +11,7 @@ return new class extends Migration
      *
      * @return void
      */
+    //Funcion para crear la tabla profesores y sus campos
     public function up()
     {
         Schema::create('profesores', function (Blueprint $table) {

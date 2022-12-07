@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
+    // Seeders de las tablas User, estudiantes, profesores y cursos
     public function run()
     {
         User::factory(100)->create();

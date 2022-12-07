@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Student>
  */
+//Factoria de la tabla estudiantes
 class StudentFactory extends Factory
 {
     /**
